@@ -1,6 +1,5 @@
 ### Setup Instructions
 
-I had trouble installing it in Ubuntu WSL, I got it working in Windows using Powershell
 You will need to have node at least version 8 installed
 
 All instructions are assuming that you are starting in `/theme` directory
