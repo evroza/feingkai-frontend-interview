@@ -1,0 +1,53 @@
+<!--begin:: Widgets/Markets-->
+<m-portlet>
+    <!-- use ng-container[mPortletHeadTitle] for the title -->
+	<ng-container mPortletHeadTitle>
+		<div class="m-portlet__head-title">
+			<h3 class="m-portlet__head-text">
+				Markets
+			</h3>
+		</div>
+   </ng-container>
+   
+    <!-- use ng-container[mPortletBody] for the body content -->
+    <ng-container mPortletBody >
+         <perfect-scrollbar class="m-scrollable" data-scrollable="true" data-height="400" style="height: 400px; overflow: hidden;">
+             <div id="mCSB_2_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px;" dir="ltr">						            
+             <!--Begin:: widget list-->
+
+             <div id="markets-widget-list">
+                 <!--Begin: Markets list-->
+                 
+                 
+                 <mat-table class="markets-table mat-elevation-z8" [dataSource]="markets">
+                    
+                        
+                        <ng-container matColumnDef="id">
+                            <mat-header-cell *matHeaderCellDef [ngClass]="'customWidthClass'">ID</mat-header-cell>
+                            <mat-cell [ngClass]="'customWidthClass'" class="id-cell"
+                                      *matCellDef="let market">{{market.id}}</mat-cell>
+                    
+                        </ng-container>
+                    
+                        <ng-container matColumnDef="name">
+                            <mat-header-cell *matHeaderCellDef [ngClass]="'customWidthClass'">Name</mat-header-cell>
+                            <mat-cell class="name-cell"
+                                      *matCellDef="let market" [ngClass]="'customWidthClass'" >{{market.name}}</mat-cell>
+                        </ng-container>
+                    
+                        <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
+                    
+                        <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
+                    
+                    </mat-table>
+                      
+
+
+                <!--End: Markets list-->
+             </div>
+             <!--end:: widget list-->
+             </div>
+         </perfect-scrollbar>
+    </ng-container>
+</m-portlet>
+    <!--end:: Widgets/Markets-->

@@ -1,0 +1,104 @@
+.no-gutters>.col-10 {
+    padding-left: 0.8rem;
+}
+
+.no-gutters>.col-2{
+    text-align: center;
+}
+
+#currencies-widget-list m-widget4__info{
+    padding-left: 1rem;
+}
+
+.currency_widget{
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.m-widget4 .currency_widget .m-widget4__info {
+    padding-left: 0.9rem;
+    padding-right: 0;
+}
+
+.m-widget4 .currency_widget .m-widget4__title{
+    color: #56e228
+}
+
+.m-widget4 .m-widget4__item {
+    display: flex;
+}
+
+.currency_widget .btn-group{
+    position: relative;
+	display: flex;
+    top: 10px;
+}
+.currency_widget label.transaction_explorer{
+    height: 22px;
+    background-image: url("/assets/app/media/img/actions/transaction_explorer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.currency_widget label.transaction_explorer a{
+	width: 100%;
+	height:100%;
+	text-align:center;
+}
+.currency_widget .address_explorer{
+    background-image: url("/assets/app/media/img/actions/address_explorer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.widget_diplay_data p {
+    margin-bottom: 0.4rem;
+    font-family: "Segoe UI";
+    font-weight: 500;
+}
+
+.widget_diplay_data span {
+    font-family: Poppins
+}
+
+.currency_type{
+    margin-left: 0.7rem;
+    font-weight: 600;
+    padding: 0px 6px;
+    border-radius: 0;
+}
+.widget_diplay_data{
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+}
+.widget4-v-separator{
+    height: 30px;
+    width: 1px;
+    border: 1px solid #646464;
+    position: absolute;
+    left: -7px;
+}
+.widget4-h-separator{
+    display: block;
+    height: 1px;
+    width: 60%;
+    border: 0.3px solid rgba(100,100,100,0.08);
+    position: relative;
+    left: 10%;
+}
+.widget4-footer{
+    width: 100%;
+    display: block;
+}
+.widget4-footer p{
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: black;
+    font-family: "Segoe UI";
+}
+.widget4-footer p .m--font-brand{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 0.3rem;
+}

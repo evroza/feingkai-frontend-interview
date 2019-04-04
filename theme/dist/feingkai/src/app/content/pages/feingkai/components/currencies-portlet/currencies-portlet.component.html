@@ -1,0 +1,73 @@
+<!--begin:: Widgets/Currencies-->
+<m-portlet>
+    <!-- use ng-container[mPortletHeadTitle] for the title -->
+	<ng-container mPortletHeadTitle>
+		<div class="m-portlet__head-title">
+			<h3 class="m-portlet__head-text">
+				Currencies
+			</h3>
+		</div>
+   </ng-container>
+   
+    <!-- use ng-container[mPortletBody] for the body content -->
+    <ng-container mPortletBody >
+         <perfect-scrollbar class="m-scrollable" data-scrollable="true" data-height="400" style="height: 400px; overflow: hidden;">
+             <div id="mCSB_2_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px;" dir="ltr">						            
+             <!--Begin:: widget list-->
+
+             <div id="currencies-widget-list">
+                 <!--Begin: Currencies list-->
+                 <div class="row no-gutters m-widget4__item currency_widget"  *ngFor="let currency of currencies">
+                    <div class="col-2 m-widget4__img m-widget4__img--logo">
+                        <img src="./assets/app/media/img/currencies-logos/{{currency.id | lowercase}}.png" alt="" />
+                                                
+                        
+                        <div class="btn-group">
+                            <label (click)="openLink($event)" class="btn btn-secondary m-btn btn-sm m-btn--pill transaction_explorer" aria-pressed="false" 
+                            [attr.disabled]="!currency.explorer_transaction" [attr.data-link]="currency.explorer_transaction" data-toggle="tooltip" data-placement="bottom" 
+                            title="Transaction Explore: {{currency.explorer_transaction || 'unavailable'}}"
+                             *ngIf="currency.explorer_transaction">
+                        
+                           </label>
+                           <label (click)="openLink($event)" class="btn btn-secondary m-btn btn-sm m-btn--pill address_explorer" aria-pressed="false"
+                           [attr.disabled]="!currency.address_transaction" [attr.data-link]="currency.explorer_address" data-toggle="tooltip" data-placement="bottom" 
+                           title="Address Explore: {{currency.explorer_address || 'unavailable'}}"
+                            *ngIf="currency.explorer_address">
+                                 
+                           </label>
+                        </div>
+                
+                
+                    </div>
+                    <div class="col-10 m-widget4__info">
+                        <span class="m-widget4__title">{{currency.id | uppercase}} - {{currency.symbol}} </span>
+                        <span class="m-badge {{currency.badgeBrand}} m-badge--square currency_type">{{currency.type}}</span><br />
+                        <div class="widget_diplay_data row no-gutters">
+                            <div class="col-5">
+                                <p>Deposit fee: <span><strong>{{currency.deposit_fee}}</strong></span></p>
+                                <p>Withdraw fee: <span><strong>{{currency.withdraw_fee}}</strong></span></p>
+                            </div>
+                            <div class="col-7">
+                                <div class="widget4-v-separator"></div>
+                
+                                <p>Base factor: <span><strong>{{currency.base_factor}}</strong></span></p>
+                                <p>Precision: <span><strong>{{currency.precision}}</strong></span></p>
+                            </div>
+                
+                            <div class="widget4-h-separator"></div>
+                
+                            <div class="widget4-footer">
+                                <p><strong>Quick W. Limit: </strong><span class="m--font-brand" id="span_a7c4_1">{{currency.quick_withdraw_limit}}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                
+                   </div>
+                <!--End: Currencies list-->
+             </div>
+             <!--end:: widget list-->
+             </div>
+         </perfect-scrollbar>
+    </ng-container>
+</m-portlet>
+    <!--end:: Widgets/Currencies-->
