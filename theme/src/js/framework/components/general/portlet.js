@@ -10,6 +10,8 @@ var mPortlet = function(elementId, options) {
 
     if (!element) {
         return;
+
+
     }
 
     //== Default options

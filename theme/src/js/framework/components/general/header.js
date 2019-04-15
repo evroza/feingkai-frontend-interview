@@ -9,6 +9,8 @@ var mHeader = function(elementId, options) {
 
     if (element === undefined) {
         return;
+
+
     }
 
     //== Default options
